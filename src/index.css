@@ -71,3 +71,131 @@ ul {
 }
 
 /* ============= PROJECT CSS =============== */
+
+.hero {
+  width: 100%;
+  background-color: white;
+
+  .hero-center {
+    width: 80vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    .hero-title {
+      h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        line-height: 2rem;
+      }
+    }
+
+    .img-container {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .hero .hero-center {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .hero .hero-center {
+    gap: 5rem;
+
+    .img-container {
+      display: block;
+
+      img {
+        height: 20rem;
+        /* width: 30rem; */
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.projects {
+  width: 100%;
+  background-color: var(--grey-100);
+  padding: 4rem 0;
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+
+    .title-underline {
+      border: 2px solid steelblue;
+      height: 2px;
+      width: 4rem;
+      margin: 1.3rem auto;
+    }
+  }
+
+  .projects-center {
+    width: 80vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    row-gap: 2rem;
+
+    .project {
+      border-radius: 4px;
+      /* box-shadow: ; */
+      background-color: white;
+      transition: 0.3s ease-in-out all;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      .img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      h5 {
+        margin: 0.9rem;
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--textColor);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .projects .projects-center {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .projects .projects-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects .projects-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
