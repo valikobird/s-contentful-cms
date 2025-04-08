@@ -73,29 +73,28 @@ ul {
 /* ============= PROJECT CSS =============== */
 
 .hero {
-  width: 100%;
+  min-height: 40vh;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
 
   .hero-center {
     width: 80vw;
     max-width: 1120px;
-    margin: 0 auto;
-    padding: 5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
 
     .hero-title {
       h1 {
         font-size: 4rem;
-        font-weight: 900;
+        font-weight: 700;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
 
       p {
-        line-height: 2rem;
+        line-height: 2;
+        color: var(--grey-700);
       }
     }
 
@@ -113,14 +112,16 @@ ul {
 
 @media screen and (min-width: 920px) {
   .hero .hero-center {
-    gap: 5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    gap: 4rem;
 
     .img-container {
       display: block;
 
       img {
         height: 20rem;
-        /* width: 30rem; */
         object-fit: contain;
       }
     }
@@ -128,9 +129,8 @@ ul {
 }
 
 .projects {
-  width: 100%;
   background-color: var(--grey-100);
-  padding: 4rem 0;
+  padding: 5rem 0;
 
   .title {
     font-size: 2rem;
@@ -152,16 +152,19 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    row-gap: 2rem;
 
     .project {
-      border-radius: 4px;
-      /* box-shadow: ; */
       background-color: white;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
       transition: 0.3s ease-in-out all;
 
       &:hover {
-        scale: 1.05;
+        transform: scale(1.05);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
 
       .img {
@@ -173,10 +176,10 @@ ul {
       }
 
       h5 {
-        margin: 0.9rem;
+        padding: 1rem 0;
         font-size: 1.5rem;
         text-align: center;
-        color: var(--textColor);
+        color: var(--grey-700);
       }
     }
   }
